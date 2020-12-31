@@ -1,2 +1,2 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Info Type="StartUp" GroupUUID="01079a1d-9dc0-49d6-ac60-5558c8303f39" Visible="1" Icon="" File="add_test.mdl" Name="add_test" />
+<Info Type="Basic" GroupUUID="01079a1d-9dc0-49d6-ac60-5558c8303f39" Visible="1" Icon="" File="add_test.mdl" Name="add_test" />
