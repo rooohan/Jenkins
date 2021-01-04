@@ -26,4 +26,10 @@ pipeline {
     }
 
   }
+  post {
+        always {
+            junit 'build/reports/test_file/test_file1.xml'
+        }
+  }
+  
 }
