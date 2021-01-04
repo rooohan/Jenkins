@@ -21,8 +21,7 @@ pipeline {
 
     stage('pyfile test') {
       steps {
-        sh 'cd new'
-        sh 'python test_file.py'
+        sh 'ls'
       }
     }
 
