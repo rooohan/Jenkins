@@ -1,12 +1,23 @@
-Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent { docker 'python:3.5.1' }
-    stages {
-        stage('build') {
-            steps {
-                sh 'echo "Hello World"'
-                sh 'python --version'
-            }
-        }
+  agent {
+    docker {
+      image 'python:3-alpine'
     }
+
+  }
+  stages {
+    stage('step1') {
+      steps {
+        echo 'start'
+        sh 'echo "Hello World !"'
+      }
+    }
+
+    stage('env test') {
+      steps {
+        sh 'python --version'
+      }
+    }
+
+  }
 }
