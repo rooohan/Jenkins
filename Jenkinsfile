@@ -16,6 +16,7 @@ pipeline {
     stage('env test') {
       steps {
         sh 'python --version'
+        sh 'pwd'
       }
     }
 
@@ -27,9 +28,9 @@ pipeline {
 
   }
   post {
-        always {
-            junit 'build/reports/test_file/test_file1.xml'
-        }
+    always {
+      junit 'build/reports/test_file/test_file1.xml'
+    }
+
   }
-  
 }
