@@ -2,4 +2,4 @@
 % !git init
 !git add --all
 !git commit -m "auto save"
-!git push origin master
+!git push origin main
