@@ -16,6 +16,7 @@ pipeline {
     stage('env test') {
       steps {
         sh 'python --version'
+        sh 'pwd'
       }
     }
 
@@ -26,5 +27,5 @@ pipeline {
     }
 
   }
-  
+
 }
