@@ -9,7 +9,7 @@
 %------------------------------------------------------------------------------
 function CodeGenerate()
     % Open project
-    proj_name = './models/Subtract.prj';
+    proj_name = './Subtract.prj';
     open(proj_name);
     proj = simulinkproject;
     % Open the model
