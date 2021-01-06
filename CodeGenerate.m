@@ -9,12 +9,13 @@
 %------------------------------------------------------------------------------
 function CodeGenerate()
     % Open project
-    proj_name = './Subtract.prj';
+    proj_name = './Subtract_main.prj';
     open(proj_name);
-    proj = simulinkproject;
+%     proj = simulinkproject;
     % Open the model
     target_mdl = 'subtract';
-    open_system(target_mdl);
+%     open_system(target_mdl);
+    load_system(target_mdl);
     % Set model parameters
     set_param(target_mdl,'LaunchReport','off');
     try
