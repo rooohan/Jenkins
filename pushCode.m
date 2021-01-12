@@ -4,6 +4,8 @@
 
 % !git init
 % !git add --all
+!git pull origin Hannahnn
+!dir
 !git add .
 !git commit -m "auto save"
-!git push origin Hannahnn
+!git push -u origin Hannahnn
