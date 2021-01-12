@@ -3,9 +3,9 @@
  *
  * Code generation for model "subtract".
  *
- * Model version              : 1.3
+ * Model version              : 1.24
  * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
- * C++ source code generated on : Tue Jan  5 14:31:05 2021
+ * C++ source code generated on : Tue Jan 12 10:30:13 2021
  *
  * Target selection: grt.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping

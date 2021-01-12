@@ -1,15 +1,15 @@
 function CodeDefine() { 
 this.def = new Array();
-this.def["subtract_U"] = {file: "subtract_cpp.html",line:21,type:"var"};
-this.def["subtract_Y"] = {file: "subtract_cpp.html",line:24,type:"var"};
-this.def["subtract_M_"] = {file: "subtract_cpp.html",line:27,type:"var"};
-this.def["subtract_M"] = {file: "subtract_cpp.html",line:28,type:"var"};
-this.def["subtract_step"] = {file: "subtract_cpp.html",line:31,type:"fcn"};
-this.def["subtract_initialize"] = {file: "subtract_cpp.html",line:72,type:"fcn"};
-this.def["subtract_terminate"] = {file: "subtract_cpp.html",line:116,type:"fcn"};
-this.def["ExtU_subtract_T"] = {file: "subtract_h.html",line:78,type:"type"};
-this.def["ExtY_subtract_T"] = {file: "subtract_h.html",line:83,type:"type"};
-this.def["RT_MODEL_subtract_T"] = {file: "subtract_types_h.html",line:23,type:"type"};
+this.def["subtract_Y"] = {file: "subtract_cpp.html",line:21,type:"var"};
+this.def["subtract_M_"] = {file: "subtract_cpp.html",line:24,type:"var"};
+this.def["subtract_M"] = {file: "subtract_cpp.html",line:25,type:"var"};
+this.def["subtract_step"] = {file: "subtract_cpp.html",line:28,type:"fcn"};
+this.def["subtract_initialize"] = {file: "subtract_cpp.html",line:70,type:"fcn"};
+this.def["subtract_terminate"] = {file: "subtract_cpp.html",line:111,type:"fcn"};
+this.def["ExtY_subtract_T"] = {file: "subtract_h.html",line:75,type:"type"};
+this.def["P_subtract_T"] = {file: "subtract_types_h.html",line:26,type:"type"};
+this.def["RT_MODEL_subtract_T"] = {file: "subtract_types_h.html",line:29,type:"type"};
+this.def["subtract_P"] = {file: "subtract_data_cpp.html",line:21,type:"var"};
 this.def["BuiltInDTypeId"] = {file: "builtin_typeid_types_h.html",line:34,type:"type"};
 this.def["DTypeId"] = {file: "builtin_typeid_types_h.html",line:39,type:"type"};
 this.def["chunk_T"] = {file: "multiword_types_h.html",line:24,type:"type"};
@@ -349,6 +349,8 @@ function Html2SrcLink() {
 	this.html2Root["subtract_private_h.html"] = "subtract_private_h.html";
 	this.html2SrcPath["subtract_types_h.html"] = "../subtract_types.h";
 	this.html2Root["subtract_types_h.html"] = "subtract_types_h.html";
+	this.html2SrcPath["subtract_data_cpp.html"] = "../subtract_data.cpp";
+	this.html2Root["subtract_data_cpp.html"] = "subtract_data_cpp.html";
 	this.html2SrcPath["builtin_typeid_types_h.html"] = "../builtin_typeid_types.h";
 	this.html2Root["builtin_typeid_types_h.html"] = "builtin_typeid_types_h.html";
 	this.html2SrcPath["multiword_types_h.html"] = "../multiword_types.h";
@@ -386,4 +388,4 @@ function Html2SrcLink() {
 }
 Html2SrcLink.instance = new Html2SrcLink();
 var fileList = [
-"subtract_cpp.html","subtract_h.html","subtract_private_h.html","subtract_types_h.html","builtin_typeid_types_h.html","multiword_types_h.html","rtGetInf_cpp.html","rtGetInf_h.html","rtGetNaN_cpp.html","rtGetNaN_h.html","rt_nonfinite_cpp.html","rt_nonfinite_h.html","rtwtypes_h.html","rtmodel_h.html","rt_logging_c.html"];
+"subtract_cpp.html","subtract_h.html","subtract_private_h.html","subtract_types_h.html","subtract_data_cpp.html","builtin_typeid_types_h.html","multiword_types_h.html","rtGetInf_cpp.html","rtGetInf_h.html","rtGetNaN_cpp.html","rtGetNaN_h.html","rt_nonfinite_cpp.html","rt_nonfinite_h.html","rtwtypes_h.html","rtmodel_h.html","rt_logging_c.html"];

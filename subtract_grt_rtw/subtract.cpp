@@ -3,9 +3,9 @@
  *
  * Code generation for model "subtract".
  *
- * Model version              : 1.3
+ * Model version              : 1.24
  * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
- * C++ source code generated on : Tue Jan  5 14:31:05 2021
+ * C++ source code generated on : Tue Jan 12 10:30:13 2021
  *
  * Target selection: grt.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -16,9 +16,6 @@
 
 #include "subtract.h"
 #include "subtract_private.h"
-
-/* External inputs (root inport signals with default storage) */
-ExtU_subtract_T subtract_U;
 
 /* External outputs (root outports fed by signals with default storage) */
 ExtY_subtract_T subtract_Y;
@@ -31,12 +28,13 @@ RT_MODEL_subtract_T *const subtract_M = &subtract_M_;
 void subtract_step(void)
 {
   /* Outport: '<Root>/Out1' incorporates:
-   *  Inport: '<Root>/In1'
-   *  Inport: '<Root>/In2'
-   *  Inport: '<Root>/In3'
+   *  Constant: '<Root>/Constant'
+   *  Constant: '<Root>/Constant1'
+   *  Constant: '<Root>/Constant2'
    *  Sum: '<Root>/Sum'
    */
-  subtract_Y.Out1 = (subtract_U.In1 - subtract_U.In2) + subtract_U.In3;
+  subtract_Y.Out1 = (subtract_P.Constant_Value - subtract_P.Constant1_Value) -
+    subtract_P.Constant2_Value;
 
   /* Matfile logging */
   rt_UpdateTXYLogVars(subtract_M->rtwLogInfo, (&subtract_M->Timing.taskTime0));
@@ -100,9 +98,6 @@ void subtract_initialize(void)
     rtliSetLogYSignalInfo(subtract_M->rtwLogInfo, (NULL));
     rtliSetLogYSignalPtrs(subtract_M->rtwLogInfo, (NULL));
   }
-
-  /* external inputs */
-  (void)std::memset(&subtract_U, 0, sizeof(ExtU_subtract_T));
 
   /* external outputs */
   subtract_Y.Out1 = 0.0;

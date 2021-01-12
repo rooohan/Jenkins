@@ -3,9 +3,9 @@
  *
  * Code generation for model "subtract".
  *
- * Model version              : 1.3
+ * Model version              : 1.24
  * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
- * C++ source code generated on : Tue Jan  5 14:31:05 2021
+ * C++ source code generated on : Tue Jan 12 10:30:13 2021
  *
  * Target selection: grt.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -16,7 +16,6 @@
 
 #ifndef RTW_HEADER_subtract_h_
 #define RTW_HEADER_subtract_h_
-#include <cstring>
 #include <cfloat>
 #include <stddef.h>
 #include "rtwtypes.h"
@@ -70,17 +69,23 @@
 # define rtmGetTPtr(rtm)               (&(rtm)->Timing.taskTime0)
 #endif
 
-/* External inputs (root inport signals with default storage) */
-typedef struct {
-  real_T In1;                          /* '<Root>/In1' */
-  real_T In2;                          /* '<Root>/In2' */
-  real_T In3;                          /* '<Root>/In3' */
-} ExtU_subtract_T;
-
 /* External outputs (root outports fed by signals with default storage) */
 typedef struct {
   real_T Out1;                         /* '<Root>/Out1' */
 } ExtY_subtract_T;
+
+/* Parameters (default storage) */
+struct P_subtract_T_ {
+  real_T Constant_Value;               /* Expression: 8
+                                        * Referenced by: '<Root>/Constant'
+                                        */
+  real_T Constant1_Value;              /* Expression: 2
+                                        * Referenced by: '<Root>/Constant1'
+                                        */
+  real_T Constant2_Value;              /* Expression: 5
+                                        * Referenced by: '<Root>/Constant2'
+                                        */
+};
 
 /* Real-time Model Data Structure */
 struct tag_RTM_subtract_T {
@@ -102,14 +107,25 @@ struct tag_RTM_subtract_T {
   } Timing;
 };
 
+/* Block parameters (default storage) */
 #ifdef __cplusplus
 
 extern "C" {
 
 #endif
 
-  /* External inputs (root inport signals with default storage) */
-  extern ExtU_subtract_T subtract_U;
+  extern P_subtract_T subtract_P;
+
+#ifdef __cplusplus
+
+}
+#endif
+
+#ifdef __cplusplus
+
+extern "C" {
+
+#endif
 
   /* External outputs (root outports fed by signals with default storage) */
   extern ExtY_subtract_T subtract_Y;

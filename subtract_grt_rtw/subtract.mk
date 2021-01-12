@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'subtract'. 
 ## 
 ## Makefile     : subtract.mk
-## Generated on : Tue Jan 05 14:31:34 2021
+## Generated on : Tue Jan 12 10:30:46 2021
 ## MATLAB Coder version: 5.0 (R2020a)
 ## 
 ## Build Info:
@@ -29,7 +29,7 @@ MATLAB_ROOT               = D:\software\POLYSP~1\R2020a
 MATLAB_BIN                = D:\software\POLYSP~1\R2020a\bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)\win64
 MASTER_ANCHOR_DIR         = 
-START_DIR                 = D:\work\simulink_workspace\subtract
+START_DIR                 = D:\work\simulink_workspace\subtract_main
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0
@@ -189,7 +189,7 @@ DEFINES = $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(DEFINES_STAN
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = $(MATLAB_ROOT)\rtw\c\src\rt_logging.c $(START_DIR)\subtract_grt_rtw\rtGetInf.cpp $(START_DIR)\subtract_grt_rtw\rtGetNaN.cpp $(START_DIR)\subtract_grt_rtw\rt_nonfinite.cpp $(START_DIR)\subtract_grt_rtw\subtract.cpp
+SRCS = $(MATLAB_ROOT)\rtw\c\src\rt_logging.c $(START_DIR)\subtract_grt_rtw\rtGetInf.cpp $(START_DIR)\subtract_grt_rtw\rtGetNaN.cpp $(START_DIR)\subtract_grt_rtw\rt_nonfinite.cpp $(START_DIR)\subtract_grt_rtw\subtract.cpp $(START_DIR)\subtract_grt_rtw\subtract_data.cpp
 
 MAIN_SRC = $(MATLAB_ROOT)\rtw\c\src\common\rt_main.cpp
 
@@ -199,7 +199,7 @@ ALL_SRCS = $(SRCS) $(MAIN_SRC)
 ## OBJECTS
 ###########################################################################
 
-OBJS = rt_logging.obj rtGetInf.obj rtGetNaN.obj rt_nonfinite.obj subtract.obj
+OBJS = rt_logging.obj rtGetInf.obj rtGetNaN.obj rt_nonfinite.obj subtract.obj subtract_data.obj
 
 MAIN_OBJ = rt_main.obj
 
@@ -374,6 +374,10 @@ rt_nonfinite.obj : $(START_DIR)\subtract_grt_rtw\rt_nonfinite.cpp
 
 subtract.obj : $(START_DIR)\subtract_grt_rtw\subtract.cpp
 	$(CPP) $(CPPFLAGS) -Fo"$@" $(START_DIR)\subtract_grt_rtw\subtract.cpp
+
+
+subtract_data.obj : $(START_DIR)\subtract_grt_rtw\subtract_data.cpp
+	$(CPP) $(CPPFLAGS) -Fo"$@" $(START_DIR)\subtract_grt_rtw\subtract_data.cpp
 
 
 rt_main.obj : $(MATLAB_ROOT)\rtw\c\src\common\rt_main.cpp

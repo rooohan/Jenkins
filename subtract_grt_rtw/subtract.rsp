@@ -4,3 +4,4 @@ rt_logging.obj
 rt_main.obj
 rt_nonfinite.obj
 subtract.obj
+subtract_data.obj
