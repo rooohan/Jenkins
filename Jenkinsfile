@@ -4,9 +4,9 @@ pipeline {
     stage('step1') {
       steps {
         echo 'start'
+        sh 'where python'
       }
     }
 
   }
-
 }
