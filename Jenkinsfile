@@ -10,6 +10,6 @@ pipeline {
 
   }
   environment {
-    PATH = 'G:\\Import\\Git\\bin'
+    PATH = 'G:\\Import\\Git\\usr\\bin'
   }
 }
