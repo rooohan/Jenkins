@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'start'
         sh 'MATLAB'
-        runMATLABCommand 'disp(\'Hello World!\')'
+        runMATLABCommand "disp('Hello World!')"
       }
     }
 
