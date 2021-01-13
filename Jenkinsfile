@@ -9,4 +9,7 @@ pipeline {
     }
 
   }
+  environment {
+    PATH = 'G:\\Import\\Git\\bin'
+  }
 }
