@@ -11,5 +11,6 @@ pipeline {
   }
   environment {
     PATH = 'G:\\Import\\Git\\usr\\bin'
+    nohup = 'G:\\Import\\Git\\usr\\bin'
   }
 }
