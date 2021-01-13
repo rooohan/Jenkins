@@ -4,8 +4,8 @@ pipeline {
     stage('step1') {
       steps {
         echo 'start'
-        sh 'MATLAB'
-        runMATLABCommand "disp('Hello World!')"
+        runMATLABCommand 'disp(\'Hello World!\')'
+        runMATLABCommand 'matlab -nosplash -nodesktop -noFigureWindows -r SlkCodeGen'
       }
     }
 
