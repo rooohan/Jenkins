@@ -10,7 +10,7 @@ pipeline {
 
   }
   environment {
-    PATH = 'G:\\Import\\Git\\usr\\bin'
+    PATH = 'G:\\Import\\Git\\bin'
     nohup = 'G:\\Import\\Git\\usr\\bin'
   }
 }
