@@ -6,7 +6,7 @@ pipeline {
         echo 'start'
         runMATLABCommand 'disp(\'Hello World!\')'
         runMATLABCommand 'matlab'
-        sh 'matlab'
+        sh 'pwd'
       }
     }
 
