@@ -5,7 +5,6 @@ pipeline {
       steps {
         echo 'start'
         runMATLABCommand 'disp(\'Hello World!\')'
-        runMATLABCommand 'matlab -nosplash -nodesktop -noFigureWindows -r SlkCodeGen'
       }
     }
 
