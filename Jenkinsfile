@@ -13,6 +13,6 @@ pipeline {
   environment {
     nohup = 'G:\\Import\\Git\\usr\\bin'
     SHELL = 'G:\\Import\\Git\\bin\\sh.exe'
-    PATH = 'G:\\APP\\Matlab;G:\\APP\\Matlab\\bin\\win64'
+    PATH = 'G:\\APP\\Matlab'
   }
 }
