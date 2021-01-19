@@ -4,7 +4,6 @@ pipeline {
     stage('step1') {
       steps {
         echo 'start'
-        runMATLABCommand 'disp(\'Hello World!\')'
         runMATLABCommand 'CodeGenerate'
       }
     }
