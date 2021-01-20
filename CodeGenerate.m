@@ -1,10 +1,10 @@
 %------------------------------------------------------------------------------
 %   Simulink scrip for devops code generated.
 %   File Name    : SlkCodeGen.m
-%   MATLAB       : R2017b
-%   Author       : Tomato
-%   Time         : 2020/1/21
-%   Instructions : Creat initial version           2020/1/21           V0.1
+%   MATLAB       : R2020a
+%   Author       : Hannah
+%   Time         : 2021/1/20
+%   Instructions : Creat initial version           2021/1/20           V0.1
 %  
 %------------------------------------------------------------------------------
 function CodeGenerate()
