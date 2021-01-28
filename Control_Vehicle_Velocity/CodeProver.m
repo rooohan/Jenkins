@@ -19,11 +19,19 @@ proj.Configuration.TargetCompiler.Compiler = 'generic';
 proj.Configuration.EnvironmentSettings.IncludeFolders = {includeFolder};
 proj.Configuration.ResultsDir = fullfile(pwd, 'results');
 
+% proj.CodingRulesCodeMetrics.EnableMisraC3 = true;
+% proj.CodingRulesCodeMetrics.MisraC3Subset = 'all';
+proj.MergedReporting.EnableReportGeneration = true;
+proj.MergedReporting.ReportOutputFormat = 'PDF';
+
 % code prover
 proj.Configuration.CodeProverVerification.MainGenerator = true;
 
 % Run analysis
 cpStatus = run(proj, 'codeProver');
+
+% cpStatus = proj.run('codeProver');
+% proj.Results.getResults('readable');
 
 % Read results
 resObj = proj.Results;
