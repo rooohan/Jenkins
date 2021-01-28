@@ -1,6 +1,6 @@
 %------------------------------------------------------------------------------
 %   Simulink scrip for devops code generated.
-%   File Name    : SlkCodeGen.m
+%   File Name    : CodeGenerate.m
 %   MATLAB       : R2020a
 %   Author       : Hannah
 %   Time         : 2021/1/20
@@ -9,11 +9,11 @@
 %------------------------------------------------------------------------------
 function CodeGenerate()
     % Open project
-    proj_name = './Control_Vehicle_velocity.prj';
-    open(proj_name);
+%     proj_name = './Control_Vehicle_velocity.prj';
+%     open(proj_name);
 %     proj = simulinkproject;
     % Open the model
-    target_mdl = 'Control_Vehicle_velocity';
+    target_mdl = 'ControlVehicleVelocity';
 %     open_system(target_mdl);
     load_system(target_mdl);
     % Set model parameters
