@@ -21,7 +21,7 @@ cs.switchTarget('ert.tlc','');
 
 cs.set_param('HardwareBoard', 'None');   % Hardware board
 
-cs.set_param('TargetLang', 'C');   % Language
+cs.set_param('TargetLang', 'C++');   % Language
 
 cs.set_param('CodeInterfacePackaging', 'Nonreusable function');   % Code interface packaging
 
@@ -344,7 +344,7 @@ cs.set_param('PurelyIntegerCode', 'off');   % Support floating-point numbers
 cs.set_param('SupportNonFinite', 'on');   % Support non-finite numbers
 cs.set_param('SupportComplex', 'on');   % Support complex numbers
 cs.set_param('SupportAbsoluteTime', 'on');   % Support absolute time
-cs.set_param('SupportContinuousTime', 'off');   % Support continuous time
+cs.set_param('SupportContinuousTime', 'on');   % Support continuous time
 cs.set_param('SupportNonInlinedSFcns', 'off');   % Support non-inlined S-functions
 cs.set_param('SupportVariableSizeSignals', 'off');   % Support variable-size signals
 cs.set_param('MultiwordTypeDef', 'System defined');   % Multiword type definitions
