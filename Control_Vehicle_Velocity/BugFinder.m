@@ -1,12 +1,21 @@
+%------------------------------------------------------------------------------
+%   Simulink script for bug finder.
+%   File Name    : BugFinder.m
+%   MATLAB       : R2020a
+%   Author       : Hannah
+%   Time         : 2021/1/28
+%  
+%------------------------------------------------------------------------------
 opts = polyspace.BugFinderOptions;
-folder = [gcs, '_ert_rtw'];
-% sourceList = {'ert_main.cpp'; gcs};
-sourceList = {'ert_main.cpp'};
-% opts.Sources = {[folder, '/', sourceList{1}]; [folder, '/', sourceList{2}]};
-opts.Sources = {[folder, '/', sourceList{1}]};
-opts.EnvironmentSettings.IncludeFolders = {folder};
-% opts.EnvironmentSettings.IncludeFolders = {fullfile(polyspaceroot, 'polyspace', 'examples',...
-%     'cxx', 'Bug_Finder_Example', 'sources')};
+
+modelName = 'ControlVehicleVelocity';
+folder = [modelName, '_ert_rtw'];
+sourceFile = fullfile(pwd, folder, '*.cpp');
+includeFolder = fullfile(pwd, folder, '*.h');
+
+opts.Sources = {sourceFile};
+opts.EnvironmentSettings.IncludeFolders = {includeFolder};
+
 opts.ResultsDir = pwd;
 % rtwbuild(gcs);
 polyspaceBugFinder(opts);

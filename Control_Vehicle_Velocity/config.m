@@ -1,4 +1,4 @@
-function cs = config2()
+function cs = config()
 % MATLAB function for configuration set generated on 28-Jan-2021 10:51:21
 % MATLAB version: 9.8.0.1323502 (R2020a)
 
