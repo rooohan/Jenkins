@@ -19,15 +19,10 @@ pipeline {
         }
         stage('step4') {
             steps {
-                echo '代码静态分析及报告生成'
-            }
-        }
-        stage('step5') {
-            steps {
                 echo 'polyspace bug finder检查及报告生成'
             }
         }
-        stage('step6') {
+        stage('step5') {
             steps {
                 echo 'polyspace code prover动态测试及报告生成'
             }

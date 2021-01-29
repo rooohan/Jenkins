@@ -17,7 +17,10 @@ includeFolder = fullfile(pwd, folder, '*.h');
 proj.Configuration.Sources = {sourceFile};
 proj.Configuration.TargetCompiler.Compiler = 'generic';
 proj.Configuration.EnvironmentSettings.IncludeFolders = {includeFolder};
-proj.Configuration.ResultsDir = fullfile(pwd, 'results');
+proj.Configuration.ResultsDir = fullfile(pwd, 'results_BugFinder');
+
+proj.Configuration.MergedReporting.EnableReportGeneration = true;
+proj.Configuration.MergedReporting.ReportOutputFormat = 'PDF';
 
 % Run analysis
 bfStatus = run(proj, 'bugFinder');
@@ -26,4 +29,4 @@ bfStatus = run(proj, 'bugFinder');
 resObj = proj.Results;
 bfSummary = getSummary(resObj, 'defects');
 
-pslinkfun('openresults', '-resultsfolder', proj.Configuration.ResultsDir);
+% pslinkfun('openresults', '-resultsfolder', proj.Configuration.ResultsDir);

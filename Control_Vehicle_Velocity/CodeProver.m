@@ -17,12 +17,12 @@ includeFolder = fullfile(pwd, folder, '*.h');
 proj.Configuration.Sources = {sourceFile};
 proj.Configuration.TargetCompiler.Compiler = 'generic';
 proj.Configuration.EnvironmentSettings.IncludeFolders = {includeFolder};
-proj.Configuration.ResultsDir = fullfile(pwd, 'results');
+proj.Configuration.ResultsDir = fullfile(pwd, 'results_CodeProver');
 
 % proj.CodingRulesCodeMetrics.EnableMisraC3 = true;
 % proj.CodingRulesCodeMetrics.MisraC3Subset = 'all';
-proj.MergedReporting.EnableReportGeneration = true;
-proj.MergedReporting.ReportOutputFormat = 'PDF';
+proj.Configuration.MergedReporting.EnableReportGeneration = true;
+proj.Configuration.MergedReporting.ReportOutputFormat = 'PDF';
 
 % code prover
 proj.Configuration.CodeProverVerification.MainGenerator = true;
@@ -37,4 +37,4 @@ cpStatus = run(proj, 'codeProver');
 resObj = proj.Results;
 cpSummary = getSummary(resObj, 'runtime');
 
-pslinkfun('openresults', '-resultsfolder', proj.Configuration.ResultsDir);
+% pslinkfun('openresults', '-resultsfolder', proj.Configuration.ResultsDir);
