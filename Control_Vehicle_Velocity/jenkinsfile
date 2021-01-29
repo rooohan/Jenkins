@@ -27,6 +27,22 @@ pipeline {
                 echo 'polyspace code prover动态测试及报告生成'
             }
         }
+        stage('step6') {
+            steps {
+                echo 'HIL测试'
+            }
+        }
+        stage('step7') {
+            steps {
+                echo '实车测试'
+            }
+        }
+        stage('step8') {
+            steps {
+                echo '生成环境测试'
+            }
+        }
+        
    }
 
     environment {
