@@ -15,7 +15,7 @@ modelName = 'ControlVehicleVelocity';
 folder = [modelName, '_ert_rtw'];
 % Specify sources and includes
 sourceFile = {fullfile(pwd, folder, '*.cpp')};
-includeFolder = {fullfile(pwd, folder, '*.h'); 'D:\\software\\Polyspace\\R2020a\\simulink\\include'};
+includeFolder = {fullfile(pwd, folder, '*.h'); fullfile(matlabroot, 'simulink', 'include')};
 
 % Configure analysis
 proj.Configuration.Sources = sourceFile;
