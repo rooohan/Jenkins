@@ -5,18 +5,22 @@
 %   Author       : Hannah
 %   Time         : 2021/1/28
 %  
+% red: 代表每次执行都会发生的错误
+% orange: 代表在某种特殊情况下才会出现的错误
+% gray: 此段代码永远不会被执行
+% green: 安全
 %------------------------------------------------------------------------------
 proj = polyspace.Project;
 modelName = 'ControlVehicleVelocity';
 folder = [modelName, '_ert_rtw'];
 % Specify sources and includes
-sourceFile = fullfile(pwd, folder, '*.cpp');
-includeFolder = fullfile(pwd, folder, '*.h');
+sourceFile = {fullfile(pwd, folder, '*.cpp')};
+includeFolder = {fullfile(pwd, folder, '*.h'); 'D:\\software\\Polyspace\\R2020a\\simulink\\include'};
 
 % Configure analysis
-proj.Configuration.Sources = {sourceFile};
+proj.Configuration.Sources = sourceFile;
+proj.Configuration.EnvironmentSettings.IncludeFolders = includeFolder;
 proj.Configuration.TargetCompiler.Compiler = 'generic';
-proj.Configuration.EnvironmentSettings.IncludeFolders = {includeFolder};
 proj.Configuration.ResultsDir = fullfile(pwd, 'results_CodeProver');
 
 % proj.CodingRulesCodeMetrics.EnableMisraC3 = true;

@@ -6,17 +6,27 @@
 %   Time         : 2021/1/28
 %  
 %------------------------------------------------------------------------------
-opts = polyspace.BugFinderOptions;
-
+proj = polyspace.Project;
 modelName = 'ControlVehicleVelocity';
 folder = [modelName, '_ert_rtw'];
-sourceFile = fullfile(pwd, folder, '*.cpp');
-includeFolder = fullfile(pwd, folder, '*.h');
+% Specify sources and includes
+sourceFile = {fullfile(pwd, folder, '*.cpp')};
+includeFolder = {fullfile(pwd, folder, '*.h'); 'D:\\software\\Polyspace\\R2020a\\simulink\\include'};
 
-opts.Sources = {sourceFile};
-opts.EnvironmentSettings.IncludeFolders = {includeFolder};
+% Configure analysis
+proj.Configuration.Sources = sourceFile;
+proj.Configuration.EnvironmentSettings.IncludeFolders = includeFolder;
+proj.Configuration.TargetCompiler.Compiler = 'generic';
+proj.Configuration.ResultsDir = fullfile(pwd, 'results_BugFinder');
 
-opts.ResultsDir = pwd;
-% rtwbuild(gcs);
-polyspaceBugFinder(opts);
-polyspaceBugFinder('-results-dir', opts.ResultsDir);
+proj.Configuration.MergedReporting.EnableReportGeneration = true;
+proj.Configuration.MergedReporting.ReportOutputFormat = 'PDF';
+
+% Run analysis
+bfStatus = run(proj, 'bugFinder');
+
+% Read results
+resObj = proj.Results;
+bfSummary = getSummary(resObj, 'defects');
+
+% pslinkfun('openresults', '-resultsfolder', proj.Configuration.ResultsDir);
