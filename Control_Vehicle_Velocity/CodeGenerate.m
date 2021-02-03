@@ -10,7 +10,7 @@
 function CodeGenerate()
     % Open project
     proj_name = './Control_Vehicle_velocity.prj';
-%     open(proj_name);
+    open(proj_name);
 %     proj = simulinkproject;
     % Open the model
     target_mdl = 'ControlVehicleVelocity';
