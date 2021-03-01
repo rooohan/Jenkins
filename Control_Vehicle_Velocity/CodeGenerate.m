@@ -17,7 +17,7 @@ function CodeGenerate()
 %     open_system(target_mdl);
     load_system(target_mdl);
     % Set model parameters
-    set_param(target_mdl,'LaunchReport','off');
+%     set_param(target_mdl,'LaunchReport','off');
     try
         rtwbuild(target_mdl);
     catch
