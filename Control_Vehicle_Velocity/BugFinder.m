@@ -5,11 +5,12 @@
 %   Author       : Hannah
 %   Time         : 2021/1/28
 %  
-%% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+%% Specify model
 proj = polyspace.Project;
 modelName = 'ControlVehicleVelocity';
 folder = [modelName, '_ert_rtw'];
-% Specify sources and includes
+%% Specify sources and includes
 sourceFile = {fullfile('D:\work\node_results\workspace\DEMO', folder, '*.cpp')};
 includeFolder = {fullfile('D:\work\node_results\workspace\DEMO', folder, '*.h'); fullfile(matlabroot, 'simulink', 'include')};
 

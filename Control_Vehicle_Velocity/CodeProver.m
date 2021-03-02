@@ -9,11 +9,12 @@
 % orange: 代表在某种特殊情况下才会出现的错误
 % gray: 此段代码永远不会被执行
 % green: 安全
-%% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+%% Specify model
 proj = polyspace.Project;
 modelName = 'ControlVehicleVelocity';
 folder = [modelName, '_ert_rtw'];
-% Specify sources and includes
+%% Specify sources and includes
 sourceFile = {fullfile('D:\work\node_results\workspace\DEMO', folder, '*.cpp')};
 includeFolder = {fullfile('D:\work\node_results\workspace\DEMO', folder, '*.h'); fullfile(matlabroot, 'simulink', 'include')};
 
@@ -41,4 +42,4 @@ cpStatus = run(proj, 'codeProver');
 resObj = proj.Results;
 cpSummary = getSummary(resObj, 'runtime');
 
-%% pslinkfun('openresults', '-resultsfolder', proj.Configuration.ResultsDir);
+% pslinkfun('openresults', '-resultsfolder', proj.Configuration.ResultsDir);

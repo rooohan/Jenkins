@@ -5,8 +5,9 @@
 %   Author       : Hannah
 %   Time         : 2021/1/20
 %   Instructions : Creat initial version           2021/1/20           V0.1
-%  
 %------------------------------------------------------------------------------
+
+%% generate code
 function CodeGenerate()
     % Open project
     proj_name = './Control_Vehicle_velocity.prj';
