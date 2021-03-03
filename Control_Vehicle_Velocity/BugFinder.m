@@ -21,7 +21,7 @@ proj.Configuration.TargetCompiler.Compiler = 'generic';
 proj.Configuration.ResultsDir = fullfile('D:\work\node_results\workspace\DEMO', 'results_BugFinder');
 
 proj.Configuration.MergedReporting.EnableReportGeneration = true;
-proj.Configuration.MergedReporting.ReportOutputFormat = 'PDF';
+proj.Configuration.MergedReporting.ReportOutputFormat = 'HTML'; %PDF
 
 %% Run analysis
 bfStatus = run(proj, 'bugFinder');
