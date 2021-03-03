@@ -4,7 +4,8 @@
 % Time: 2021.3.2
 % Author: Hannah
 % ------------------------------------------
-model_name = gcs;
+model_name = 'ControlVehicleVelocity';   %gcs
+
 set_param(model_name,'StopTime','10.0');
 set_param(model_name,'SolverType','Fixed-step');
 set_param(model_name,'Solver','FixedStepAuto');
