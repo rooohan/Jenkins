@@ -5,11 +5,12 @@
 % Author: Hannah
 % ------------------------------------------
 model_name = 'ControlVehicleVelocity';   %gcs
+load_system(model_name);
 
-set_param(model_name,'StopTime','10.0');
+set_param(model_name,'StopTime','4.0');
 set_param(model_name,'SolverType','Fixed-step');
-set_param(model_name,'Solver','FixedStepAuto');
-set_param(model_name,'FixedStep','0.05');
+set_param(model_name,'Solver','FixedStepAuto'); %Discrete
+set_param(model_name,'FixedStep','0.1');
 
 set_param(model_name,'SystemTargetFile','ert.tlc');
 set_param(model_name,'PortableWordSizes','off');
@@ -52,3 +53,9 @@ end
 xlswrite('./test_case.xlsx', TestResult', 'Sheet1', 'D2');
 
 % [~,~,SIL_Out] = sim(model_name);
+%% plot the result
+fig1 = figure;
+subplot(3,1,1), plot(MIL_Out), title('Output for Normal Simulation')
+subplot(3,1,2), plot(SIL_Out), title('Output for SIL Simulation')
+subplot(3,1,3), plot(MIL_Out-SIL_Out), ...
+    title('Difference Between Normal and SIL');
